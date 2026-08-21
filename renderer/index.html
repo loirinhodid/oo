@@ -2,41 +2,26 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#080a0f" />
   <title>Rover Client</title>
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
   <header class="titlebar">
-    <div class="brand"><span class="brand-mark">R</span><strong>ROVER</strong><span>CLIENT</span></div>
-    <div class="window-actions">
-      <button data-window="minimize">—</button><button data-window="maximize">□</button><button data-window="close">×</button>
-    </div>
+    <div class="brand"><span class="brand-mark">R</span><b>ROVER</b><span>CLIENT</span></div>
+    <div class="window-actions"><button data-window="minimize">−</button><button data-window="maximize">□</button><button data-window="close">×</button></div>
   </header>
-
   <aside class="sidebar">
-    <button class="nav active">⌂ <span>Biblioteca</span></button>
-    <button class="nav">◉ <span>Amigos</span></button>
-    <button class="nav">◌ <span>Social</span></button>
-    <button class="nav">⚙ <span>Personalizar</span></button>
+    <div class="side-main">
+      <button class="nav active" data-view="library">⌂<span>Biblioteca</span></button>
+      <button class="nav" data-view="friends">♧<span>Amigos</span></button>
+      <button class="nav" data-view="social">◌<span>Social</span></button>
+      <button class="nav" data-view="settings">⚙<span>Personalizar</span></button>
+    </div>
+    <div class="side-user"><div class="avatar">P</div><div><b>Prometheos</b><small>Nível 1 · 0 XP</small></div></div>
   </aside>
-
-  <main>
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">SUA BIBLIOTECA</p>
-        <h1>Seus jogos.<br /><em>Do seu jeito.</em></h1>
-        <p class="muted">Um launcher pessoal para organizar e iniciar os jogos que já estão instalados no seu computador.</p>
-        <div class="search"><span>⌕</span><input id="search" placeholder="Pesquisar jogos..." /></div>
-      </div>
-    </section>
-
-    <section class="content">
-      <div class="section-head"><div><p class="eyebrow">BIBLIOTECA</p><h2>Meus jogos</h2></div><button class="ghost">+ Adicionar jogo</button></div>
-      <div id="games" class="games"></div>
-    </section>
-  </main>
-
+  <main id="app"></main>
   <script src="./app.js"></script>
 </body>
 </html>
